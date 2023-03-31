@@ -27,7 +27,20 @@ namespace PrimeNumber
                 }
                 if (isPrime)
                 {
-                    Console.Write("\t" + i);
+
+                    int  r, sum = 0, temp;
+                    
+                    temp = i;
+                    while (temp > 0)
+                    {
+                        r = temp % 10;
+                        sum = (sum * 10) + r;
+                        temp = temp / 10;
+                    }
+                    if (i == sum)
+                        Console.Write("\t" + i);
+                    
+                    
                 }
                 isPrime = true;
             }
